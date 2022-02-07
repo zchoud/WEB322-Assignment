@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Launch Chrome",
+          "url": "http://localhost:8080",
+          "webRoot": "${workspaceFolder}/web322-app",
+          "trace": true
+        },
+        {
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "request": "launch",
+            "type": "vscode-edge-devtools.debug",
+            "url": "http://localhost:8080" // Provide your project's url to finish configuring
+        }
+    ]
+}
