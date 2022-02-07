@@ -1,3 +1,25 @@
+// const employeeData = require("./data/employees.json");
+// const departmentData = require("./data/department.json");
+// const fs = require('fs');
+// const { ifError } = require("assert");
+// let employees = new Array();
+// let departments = new Array();
+
+// Host
+//     ec2-3-229-166-245.compute-1.amazonaws.com
+// Database
+//     d8ucia24vlo5a9
+// User
+//     vhunvoapijsmew
+// Port
+//     5432
+// Password
+//     a49ad8086c2695395ee326cfe447920e9e06468420e530044ae34e7ae8f4f6a3
+// URI
+//     postgres://vhunvoapijsmew:a49ad8086c2695395ee326cfe447920e9e06468420e530044ae34e7ae8f4f6a3@ec2-3-229-166-245.compute-1.amazonaws.com:5432/d8ucia24vlo5a9
+// Heroku CLI
+//     heroku pg:psql postgresql-contoured-70554 --app secret-meadow-60409
+
 const { where } = require('sequelize');
 const Sequelize = require('sequelize');
 var sequelize = new Sequelize('d8ucia24vlo5a9', 'vhunvoapijsmew', 'a49ad8086c2695395ee326cfe447920e9e06468420e530044ae34e7ae8f4f6a3', {
@@ -24,6 +46,7 @@ var Employee = sequelize.define('Employee', {
     addressStreet: Sequelize.STRING,
     addressCity: Sequelize.STRING,
     addressPostal: Sequelize.STRING,
+    addressState: Sequelize.STRING,
     maritalStatus: Sequelize.STRING,
     department: Sequelize.INTEGER,
     isManager: Sequelize.BOOLEAN,
